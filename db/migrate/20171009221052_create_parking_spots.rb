@@ -7,6 +7,8 @@ class CreateParkingSpots < ActiveRecord::Migration[5.1]
       t.integer :zip
       t.string :description
       t.integer :owner_id
+      t.string :photo
+      t.float :price
 
       t.timestamps
     end

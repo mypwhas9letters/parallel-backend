@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20171009221115) do
     t.string "city"
     t.string "state"
     t.integer "zip"
-    t.text "description"
+    t.string "description"
     t.integer "owner_id"
+    t.string "photo"
+    t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,8 +31,6 @@ ActiveRecord::Schema.define(version: 20171009221115) do
   create_table "reservations", force: :cascade do |t|
     t.date "startDate"
     t.date "endDate"
-    t.time "startTime"
-    t.time "endTime"
     t.integer "guest_id"
     t.integer "parking_spot_id"
     t.datetime "created_at", null: false
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20171009221115) do
   create_table "reviews", force: :cascade do |t|
     t.text "review"
     t.integer "guest_id"
-    t.integer "parking_spot_id"
+    t.integer "reservation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
