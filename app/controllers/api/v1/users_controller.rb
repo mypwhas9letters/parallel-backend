@@ -1,18 +1,35 @@
 class Api::V1::UsersController < ApplicationController
+  # skip_before_action :authorized, only: [:create]
+
   def index
     @users = User.all
     render json: @users, status: 200
   end
 
+
+
   def create
-    @user = User.create(user_params)
-    render json: @user, status: 201
+    user = User.new(username: params[:username], password: params[:password], email: params[:email])
+    if user.save
+      token = encode_token({ user_id: user.id})
+      render json: {user: user, jwt: token}
+    else
+      render json: { message: "Error"}
+    end
   end
 
-  private
-  def user
-    params.permit(:body)
-  end
+
+
+  # def me
+  #   if @user
+  #     render json: { user: @user, books: @user.books}
+  #   else
+  #     render json: { message: "Error"}
+  #   end
+  #
+  # end
+
+
 
 
 end

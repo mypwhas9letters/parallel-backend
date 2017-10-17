@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_secure_password
+
   has_many :parking_spots, :foreign_key => 'owner_id'
   has_many :reservations, :through => :parking_spots
   has_many :trips, :foreign_key => 'guest_id', :class_name =>'Reservation'

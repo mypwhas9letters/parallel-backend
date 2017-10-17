@@ -5,14 +5,12 @@ class Api::V1::ParkingSpotsController < ApplicationController
   end
 
   def create
-    @parking_spot = ParkingSpot.create(parking_spot_params)
-    render json: @parking_spot, status: 201
+    @parking_spot = ParkingSpot.new(title: params[:title], address: params[:address], city: params[:city], state: params[:state], zip: params[:zip], description: params[:description], owner_id: params[:owner_id], photo: params[:photo], price: params[:price])
+    if @parking_spot.save
+      render json: @parking_spot, status: 200
+    else
+      render json: { message: "Error"}
+    end
   end
-
-  private
-  def parking_spot
-    params.permit(:body)
-  end
-
 
 end
