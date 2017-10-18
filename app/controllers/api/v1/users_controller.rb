@@ -20,14 +20,14 @@ class Api::V1::UsersController < ApplicationController
 
 
 
-  # def me
-  #   if @user
-  #     render json: { user: @user, books: @user.books}
-  #   else
-  #     render json: { message: "Error"}
-  #   end
-  #
-  # end
+  def me
+    if current_user
+      render json: { user: @user, parkingSpots: @user.parking_spots, reservations: @user.reservations, trips: @user.trips}
+    else
+      render json: { message: "Test"}
+    end
+
+  end
 
 
 

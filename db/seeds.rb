@@ -25,12 +25,10 @@ ps4 = ParkingSpot.create(title: "Free Sandwich If You Park Here", address: "this
 res = Reservation.create(startDate: "11/20/2017", endDate: "11/21/2017",  guest_id: 1, parking_spot_id: 2)
 res2 = Reservation.create(startDate: "10/20/2017", endDate: "10/21/2017", guest_id: 2, parking_spot_id: 1)
 res3 = Reservation.create(startDate: "10/23/2017", endDate: "10/30/2017", guest_id: 2, parking_spot_id: 4)
-res4 = Reservation.create(startDate: "11/2/2017", endDate: "11/6/2017", guest_id: 3, parking_spot_id: 5)
+res4 = Reservation.create(startDate: "11/2/2017", endDate: "11/6/2017", guest_id: 3, parking_spot_id: 1)
 res5 = Reservation.create(startDate: "11/10/2017", endDate: "11/14/2017",  guest_id: 4, parking_spot_id: 2)
 
-
-
-rev = Review.create(review: "It was a nice spot", guest_id: 1, reservation_id: 1)
-rev2 = Review.create(review: "Nice and clean", guest_id: 2, reservation_id: 2)
-rev3 = Review.create(review: "Terrible host", guest_id: 3, reservation_id: 4)
-rev4 = Review.create(review: "This is not Sparta", guest_id: 2, reservation_id: 3)
+rev = Review.create(review: "It was a nice spot", guest_id: 1, parking_spot_id: 1)
+rev2 = Review.create(review: "Nice and clean", guest_id: 2, parking_spot_id: 2)
+rev3 = Review.create(review: "Terrible host", guest_id: 3, parking_spot_id: 4)
+rev4 = Review.create(review: "This is not Sparta", guest_id: 2, parking_spot_id: 3)

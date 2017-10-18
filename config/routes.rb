@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [:index]
-      resources :parking_spots, only: [:index, :create]
+      resources :parking_spots, only: [:index, :create, :show]
 
       post '/users', to: 'users#create'
       post '/login', to: 'auth#create'
+      get '/users/me', to: 'users#me'
     end
   end
 end
