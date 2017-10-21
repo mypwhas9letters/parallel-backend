@@ -3,5 +3,5 @@ class ParkingSpot < ApplicationRecord
   has_many :reservations
   has_many :reviews
   has_many :guests, :class_name => "User", :through => :reservations
-
+  has_many :unavailable_dates
 end
