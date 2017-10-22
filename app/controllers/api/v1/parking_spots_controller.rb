@@ -15,7 +15,7 @@ class Api::V1::ParkingSpotsController < ApplicationController
 
   def show
     parking_spot = ParkingSpot.find(params[:id])
-    render json: {parkingSpot: parking_spot, reviews: parking_spot.reviews, unavailableDates: parking_spot.unavailable_dates}
+    render json: {parkingSpot: parking_spot, reviews: parking_spot.reviews, unavailableDates: parking_spot.reservations}
 
   end
 

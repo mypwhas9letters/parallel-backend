@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create(username: "hui", password: "123", email: "h.h.com")
-User.create(username: "person2", password: "123", email: "2.h.com")
+User.create(username: "hui", password: "123", email: "h.h.com", profile_pic: "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/14344680_10154151620278369_5486872208605203662_n.jpg?oh=7a974d67380255892a8646065e6e8664&oe=5A73AB48")
+User.create(username: "person2", password: "123", email: "2.h.com", profile_pic: "http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2016/11/TALL-ALL-1.jpg")
 User.create(username: "person3", password: "123", email: "3.h.com")
 User.create(username: "person4", password: "123", email: "4.h.com")
 User.create(username: "person5", password: "123", email: "5.h.com")
@@ -29,13 +29,15 @@ ParkingSpot.create(title: "Please pick me, no one likes me", address: "bad itch 
 Reservation.create(date: "Fri Oct 27 2017",  guest_id: 1, parking_spot_id: 2, status: "approved")
 Reservation.create(date: "Mon Nov 6 2017", guest_id: 2, parking_spot_id: 1, status: "denied")
 Reservation.create(date: "Wed Nov 15 2017", guest_id: 2, parking_spot_id: 4, status: "pending")
+Reservation.create(date: "Wed Nov 15 2017", guest_id: 2, parking_spot_id: 5, status: "pending")
+
 Reservation.create(date: "Fri Nov 24 2017", guest_id: 3, parking_spot_id: 1, status: "approved")
 Reservation.create(date: "Tue Nov 21 2017",  guest_id: 4, parking_spot_id: 2, status: "approved")
 Reservation.create(date: "Sun Oct 29 2017",  guest_id: 5, parking_spot_id: 1, status: "approved")
 Reservation.create(date: "Wed Nov 8 2017", guest_id: 6, parking_spot_id: 1, status: "denied")
 Reservation.create(date: "Fri Nov 17 2017", guest_id: 4, parking_spot_id: 1, status: "pending")
-Reservation.create(date: "Sat Nov 25 2017", guest_id: 2, parking_spot_id: 1, status: "pending")
-Reservation.create(date: "Mon Nov 20 2017",  guest_id: 2, parking_spot_id: 2, status: "pending")
+Reservation.create(date: "Sat Nov 25 2017", guest_id: 2, parking_spot_id: 5, status: "pending")
+Reservation.create(date: "Mon Nov 20 2017",  guest_id: 2, parking_spot_id: 5, status: "denied")
 
 
 
@@ -45,9 +47,3 @@ Review.create(review: "Terrible host", guest_id: 3, parking_spot_id: 4)
 Review.create(review: "This is not Sparta", guest_id: 2, parking_spot_id: 3)
 Review.create(review: "I found sewards cleaner than this", guest_id: 2, parking_spot_id: 1)
 Review.create(review: "Mine is too big for it", guest_id: 4, parking_spot_id: 1)
-
-
-
-UnavailableDate.create(parking_spot_id: 1, unavailable_dates: "Mon Nov 6 2017")
-UnavailableDate.create(parking_spot_id: 1, unavailable_dates: "Wed Nov 22 2017")
-UnavailableDate.create(parking_spot_id: 1, unavailable_dates: "Sat Oct 28 2017")
