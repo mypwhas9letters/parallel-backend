@@ -1,11 +1,13 @@
 class Api::V1::ReservationsController < ApplicationController
 
   def index
-    @reservations = User.find(params[:id]).reservations
+    if current_user
+    @reservations = current_user.reservations
     if(@reservations)
       render json: @reservations, status: 200
     else
       render json: { message: "No Reservations"}
+    end
     end
   end
 

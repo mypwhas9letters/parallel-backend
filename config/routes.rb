@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       post '/users', to: 'users#create'
       post '/login', to: 'auth#create'
       get '/users/me', to: 'users#me'
-      post '/reservations', to: 'reservations#index'
+      get '/reservations', to: 'reservations#index'
       post '/newreservation', to: 'reservations#create'
     end
   end
