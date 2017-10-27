@@ -25,6 +25,10 @@ ActiveRecord::Schema.define(version: 20171009221115) do
     t.integer "owner_id"
     t.string "photo"
     t.float "price"
+    t.string "type_of_space"
+    t.float "rating"
+    t.decimal "lat", precision: 10, scale: 6
+    t.decimal "lng", precision: 10, scale: 6
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,6 +55,7 @@ ActiveRecord::Schema.define(version: 20171009221115) do
     t.string "password_digest"
     t.string "email"
     t.string "profile_pic"
+    t.string "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

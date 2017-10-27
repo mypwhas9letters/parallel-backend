@@ -10,6 +10,10 @@ class CreateParkingSpots < ActiveRecord::Migration[5.1]
       t.integer :owner_id
       t.string :photo
       t.float :price
+      t.string :type_of_space
+      t.float :rating
+      t.decimal :lat, {:precision=>10, :scale=>6}
+      t.decimal :lng, {:precision=>10, :scale=>6}
 
       t.timestamps
     end
