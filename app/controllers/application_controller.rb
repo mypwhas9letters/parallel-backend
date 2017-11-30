@@ -1,8 +1,5 @@
 class ApplicationController < ActionController::API
 
-
-    # before_action :authorized, except: [:welcome]
-
     def encode_token(payload)
       token = JWT.encode(payload, "ParkHereIfYouDare")
     end
@@ -12,7 +9,6 @@ class ApplicationController < ActionController::API
     end
 
     def decoded_token
-
       if auth_header
         token = auth_header.split(" ")[1]
         begin

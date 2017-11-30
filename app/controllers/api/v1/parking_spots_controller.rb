@@ -3,15 +3,12 @@ class Api::V1::ParkingSpotsController < ApplicationController
 
   def index
     @parking_spots = ParkingSpot.all
-    # ParkingSpot.within(10, :origin =>'10003').all
-
     render json: @parking_spots, status: 200
   end
 
 
   def filter_by_zip
     @parking_spots_by_zip = ParkingSpot.within(params[:distance], :origin =>params[:zip]).all
-
     render json: @parking_spots_by_zip, status: 200
   end
 

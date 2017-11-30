@@ -37,11 +37,7 @@ class Api::V1::ReservationsController < ApplicationController
     if res
       res.update(status: params[:status])
       render json:res
+    end
   end
-
-end
-
-
-
 
 end

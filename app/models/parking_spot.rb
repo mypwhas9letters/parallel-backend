@@ -1,8 +1,6 @@
 class ParkingSpot < ApplicationRecord
   acts_as_mappable
 
-
-
   belongs_to :owner, :class_name => "User"
   has_many :reservations
   has_many :reviews

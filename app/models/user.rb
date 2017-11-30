@@ -9,7 +9,7 @@ class User < ApplicationRecord
   ## As a guest
   has_many :trip_listings, :through => :trips, :source => :parking_spot
   has_many :hosts, :through => :trip_listings, :foreign_key => :host_id
-  
+
   ## As a host
   has_many :guests, :through => :reservations, :class_name => "User"
   has_many :host_reviews, :through => :parking_spots, :source => :reviews

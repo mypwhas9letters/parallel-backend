@@ -1,12 +1,9 @@
 class Api::V1::UsersController < ApplicationController
-  # skip_before_action :authorized, only: [:create]
 
   def index
     @users = User.all
     render json: @users, status: 200
   end
-
-
 
   def create
     user = User.new(username: params[:username], password: params[:password], email: params[:email])
@@ -18,18 +15,12 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
-
-
   def me
     if current_user
       render json: { user: @user, parkingSpots: @user.parking_spots, reservations: @user.reservations, trips: @user.trips}
     else
       render json: { message: "Test"}
     end
-
   end
-
-
-
 
 end
