@@ -8,7 +8,7 @@
 include Geokit::Geocoders
 
 
-User.create(username: "hui", password: "123", email: "h.h.com", profile_pic: "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/14344680_10154151620278369_5486872208605203662_n.jpg?oh=7a974d67380255892a8646065e6e8664&oe=5A73AB48", bio: "Hi, my name is Hui.")
+User.create(username: "hui", password: "123", email: "h.h.com", profile_pic: "https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/18738749_10154908376488369_4016707938573692042_o.jpg?_nc_cat=0&oh=7063b764eb38be0f9d75529e90cb079f&oe=5B02BFBA", bio: "Hi, my name is Hui.")
 User.create(username: "person2", password: "123", email: "2.h.com", profile_pic: "http://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_thescene.jpg,fl_progressive,g_face,h_470,q_80,w_265/v1459538777/glamour_glamour-cover-stars-emilia-clarke-has-lost-her-spankx.jpg", bio: "MY SPACE IS BIGGER THAN YOUR'S")
 User.create(username: "person3", password: "123", email: "3.h.com", profile_pic: "https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX.jpg", bio: "Take me to your leader")
 User.create(username: "person4", password: "123", email: "4.h.com", profile_pic: "https://www.heyuguys.com/images/2017/07/Who-Fears-Death-George-R.R.-Martin.jpg", bio: "I like pie")
@@ -34,13 +34,13 @@ res = MultiGeocoder.geocode(address)
 a.lat = res.lat
 a.lng = res.lng
 a.save
-a = ParkingSpot.create(title: "Free Sandwich If You Park Here", address: "1 E 161st St", city: "Bronx", state: "NY", zip: 10451, description: "This is Sparta", owner_id: 4, price: 25.00, photo: "http://www.garaga.com/uploadedImages/Corpo_-_wwwgaragacom/Content/Knowledge_Center/FAQ/Porte_croche(1).jpg", type_of_space: "garage", rating: 4.5)
+a = ParkingSpot.create(title: "Free Sandwich If You Park Here", address: "1 E 161st St", city: "Bronx", state: "NY", zip: 10451, description: "This is Sparta", owner_id: 4, price: 25.00, photo: "https://theskunkpot.com/wp-content/uploads/2017/05/detached-garage-scovellwolfe-com.jpg", type_of_space: "garage", rating: 4.5)
 address = ("#{a.address}, #{a.city}, #{a.state} #{a.zip}")
 res = MultiGeocoder.geocode(address)
 a.lat = res.lat
 a.lng = res.lng
 a.save
-a = ParkingSpot.create(title: "Best place to park", address: "90 15 Queens Blvd", city: "queens", state: "NY", zip: 11373, description: "Newly renovated garage", owner_id: 1, price: 145.00, photo: "http://i.imgur.com/mYoeeIL.jpg", type_of_space: "driveway")
+a = ParkingSpot.create(title: "Best place to park", address: "90 15 Queens Blvd", city: "queens", state: "NY", zip: 11373, description: "Newly renovated garage", owner_id: 1, price: 145.00, photo: "http://i.imgur.com/mYoeeIL.jpg", type_of_space: "driveway", rating: 2)
 address = ("#{a.address}, #{a.city}, #{a.state} #{a.zip}")
 res = MultiGeocoder.geocode(address)
 a.lat = res.lat

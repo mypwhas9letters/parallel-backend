@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20171009221115) do
     t.string "photo"
     t.float "price"
     t.string "type_of_space"
-    t.float "rating"
+    t.float "rating", default: 0
     t.decimal "lat", precision: 10, scale: 6
     t.decimal "lng", precision: 10, scale: 6
     t.datetime "created_at", null: false
